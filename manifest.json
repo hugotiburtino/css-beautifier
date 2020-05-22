@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "author": "Hugo B. Tiburtino",
   "description": "Beautifies CSS files open on browser",
+  "icons": {
+      "48": "icons/css.svg",
+      "96": "icons/css.svg"
+  },
   "content_scripts": [
     {
       "matches": ["*://*/*.css", "*://*/*.css?*"],
