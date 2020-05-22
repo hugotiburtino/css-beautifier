@@ -8,7 +8,7 @@
     {
       "matches": ["*://*/*.css", "*://*/*.css?*"],
       "css": ["assets/highlight/styles/atom-one-dark.css"],
-      "js": ["assets/vkbeautify.js" ,"assets/highlight/highlight.pack.js" , "beautifier.js"]
+      "js": ["assets/vkbeautify.js" ,"assets/highlight/highlight.pack.js" , "css_beautifier.js"]
     }
   ]
 }
