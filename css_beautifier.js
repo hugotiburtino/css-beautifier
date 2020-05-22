@@ -5,12 +5,10 @@ pre.innerText = "";
 const code = document.createElement("code");
 code.classList.add("css");
 pre.appendChild(code);
-//code.innerText = css_code;
 
 const source_code = vkbeautify.css(css_code);
 code.innerText = source_code;
 
-hljs.configure({useBR: true});
 hljs.highlightBlock(code);
 
 document.body.style.backgroundColor = window.getComputedStyle(code).backgroundColor;
