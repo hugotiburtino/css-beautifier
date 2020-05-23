@@ -6,8 +6,12 @@
   "description": "Beautifies CSS files open on browser",
   "homepage_url": "https://github.com/hugotiburtino/css-beautifier",
   "icons": {
+      "32": "icons/css_32.png",
       "48": "icons/css_48.png",
-      "96": "icons/css_96.png"
+      "64": "icons/css_64.png",
+      "96": "icons/css_96.png",
+      "128": "icons/css_128.png"
+
   },
   "content_scripts": [
     {
