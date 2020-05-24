@@ -6,7 +6,7 @@ const code = document.createElement("code");
 code.classList.add("css");
 pre.appendChild(code);
 
-const source_code = vkbeautify.css(css_code);
+const source_code = css_beautify(css_code);
 code.innerText = source_code;
 
 hljs.highlightBlock(code);

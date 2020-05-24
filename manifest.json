@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "CSS Beautifier",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Hugo B. Tiburtino",
   "description": "Beautifies CSS files open on browser",
   "homepage_url": "https://github.com/hugotiburtino/css-beautifier",
@@ -17,7 +17,7 @@
     {
       "matches": ["*://*/*.css", "*://*/*.css?*", "file:///*.css"],
       "css": ["assets/highlight/styles/atom-one-dark.css"],
-      "js": ["assets/vkbeautify.js" ,
+      "js": ["assets/beautify-css.js" ,
         "assets/highlight/highlight.pack.js" , 
         "css_beautifier.js"]
     }

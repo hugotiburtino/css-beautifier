@@ -2,14 +2,14 @@
 
 Firefox extension that beautifies CSS files
 
-Get on [Firefox Browser ADD-ONS](https://addons.mozilla.org/en-US/firefox/addon/css-beautifier/)!
+Get it on [Firefox Browser ADD-ONS](https://addons.mozilla.org/en-US/firefox/addon/css-beautifier/)!
 
 ---
 
-Automatically beautifies and colours CSS files open as a separate tab on Firefox
+Automatically beautifies and colors a CSS file open as a separate tab on Firefox
 
 ## Build with
-* [vkBeautify](https://github.com/vkiryukhin/vkBeautify) 0.99.00.beta
+* [JS-Beautifier](https://github.com/beautify-web/js-beautify) 1.11.0
 * [Highlight.js](https://github.com/highlightjs/highlight.js) 10.0.3
 
 ## Credits
