@@ -7,7 +7,7 @@ code.classList.add("css");
 pre.appendChild(code);
 
 const source_code = css_beautify(css_code);
-code.innerText = source_code;
+code.innerHTML = source_code;
 
 hljs.highlightBlock(code);
 
