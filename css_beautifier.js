@@ -10,5 +10,3 @@ const source_code = css_beautify(css_code);
 code.innerHTML = source_code;
 
 hljs.highlightBlock(code);
-
-document.body.style.backgroundColor = window.getComputedStyle(code).backgroundColor;
