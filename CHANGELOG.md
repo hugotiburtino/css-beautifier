@@ -1,5 +1,8 @@
 # Changes to CSS Beautifier (Firefox Extension)
 
+## 1.2.2 (May 28, 2020)
+- Change theme to a light one
+- Only modify pages that have a code at a 'pre' tag
 
 ## 1.2.1 (May 26, 2020)
 - Make the html of the code cleaner, removing unnecessary \<br>'s
