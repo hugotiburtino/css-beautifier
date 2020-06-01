@@ -39,6 +39,9 @@ if (isRawText) {
         code.classList.add("css");
         pre.appendChild(code);
     
+        const codeColumn = document.getElementById('value')
+        codeColumn.appendChild(pre)
+
         const source_code = css_beautify(css_code);
         code.innerHTML = source_code;
 
