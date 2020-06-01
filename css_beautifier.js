@@ -32,15 +32,20 @@ if (isRawText) {
                 .createContextualFragment(htmlFile))
 
         const pre = document.getElementsByTagName('pre')[0];
-        css_code = pre.innerText;
+        const css_code = pre.innerText;
         pre.innerText = "";
 
         const code = document.createElement("code");
         code.classList.add("css");
         pre.appendChild(code);
     
-        const codeColumn = document.getElementById('value')
-        codeColumn.appendChild(pre)
+        const codeColumn = document.getElementById('value');
+        codeColumn.appendChild(pre);
+
+        const rawContainer = document.createElement('pre');
+        rawContainer.innerText = css_code;
+
+        document.getElementById('rawdata-panel').appendChild(rawContainer);
 
         const source_code = css_beautify(css_code);
         code.innerHTML = source_code;
