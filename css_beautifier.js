@@ -45,7 +45,38 @@ if (isRawText) {
         const rawContainer = document.createElement('pre');
         rawContainer.innerText = css_code;
 
-        document.getElementById('rawdata-panel').appendChild(rawContainer);
+        const rawPanel = document.getElementById('rawdata-panel')
+        rawPanel.appendChild(rawContainer);
+
+        const rawTab = document.getElementById('rawdata-tab')
+        const beautyTab = document.getElementById('json-tab')
+
+        rawTab.addEventListener('click', () =>
+                {
+                        rawTab.parentNode.classList.add('is-active')
+                        beautyTab.parentNode.classList.remove('is-active')
+                        rawPanel.style.visibility = "visible"
+                        rawPanel.style.height = "100%"
+                        document.getElementById('json-panel')
+                                .style.visibility = "hidden"
+                        document.getElementById('json-panel')
+                                .style.height = "0px"
+                }
+        )
+        
+
+        beautyTab.addEventListener('click', () =>
+                {
+                        rawTab.parentNode.classList.remove('is-active')
+                        beautyTab.parentNode.classList.add('is-active')
+                        rawPanel.style.visibility = "hidden"
+                        rawPanel.style.height = "0px"
+                        document.getElementById('json-panel')
+                                .style.visibility = "visible"
+                        document.getElementById('json-panel')
+                                .style.height = "100%"
+                }
+        )
 
         const source_code = css_beautify(css_code);
         code.innerHTML = source_code;
