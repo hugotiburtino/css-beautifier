@@ -1,5 +1,10 @@
 # Changes to CSS Beautifier (Firefox Extension)
 
+## 1.3.0 (June 1, 2020)
+- New Feature: Panel to compare the raw text with the beautified code
+- Security: do not run if the page don't match the usual way of rendering 
+plain texts of Firefox
+
 ## 1.2.2 (May 28, 2020)
 - Change theme to a light one
 - Only modify pages that have a code at a 'pre' tag
