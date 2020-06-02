@@ -6,8 +6,27 @@ isRawText = document.body.childNodes.length === 1 &&
 
 if (isRawText) {
 
-        const panelBuilder = new PanelBuilder()
-        panelBuilder.build("resources/panel.html")
+        htmlFile = 'test'
+    
+        // adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file 
+        readPanelTemplate(file) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = () => {
+                if(rawFile.readyState === 4) {
+                        if(rawFile.status === 200 || rawFile.status == 0) {
+                                var allText = rawFile.responseText;
+                                htmlFile = allText;
+                        }
+                }
+            }
+            rawFile.send(null);
+        }
+    
+        readPanelTemplate(browser.runtime.getURL("resources/panel.html"));
+            
+        document.body.appendChild(document.createRange()
+                .createContextualFragment(htmlFile))
 
         const pre = document.getElementsByTagName('pre')[0];
         const css_code = pre.innerText;
