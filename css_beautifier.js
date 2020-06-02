@@ -6,7 +6,7 @@ isRawText = document.body.childNodes.length === 1 &&
 
 if (isRawText) {
 
-        htmlFile = 'test'
+        htmlFile = ''
     
         // adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file 
         readPanelTemplate(file) {
@@ -15,7 +15,7 @@ if (isRawText) {
             rawFile.onreadystatechange = () => {
                 if(rawFile.readyState === 4) {
                         if(rawFile.status === 200 || rawFile.status == 0) {
-                                var allText = rawFile.responseText;
+                                const allText = rawFile.responseText;
                                 htmlFile = allText;
                         }
                 }
