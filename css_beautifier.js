@@ -1,4 +1,3 @@
-
 function checkIfPlainText() {
         
         if (document.body.childNodes.length === 1 &&
@@ -12,26 +11,29 @@ function checkIfPlainText() {
                 }
 }
 
-function buildPanel() {
-
-        htmlFile = ''
-                
-        // adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file 
-        readPanelTemplate(file) {
-                var rawFile = new XMLHttpRequest();
-                rawFile.open("GET", file, false);
-                rawFile.onreadystatechange = () => {
+// adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file 
+function readPanelTemplate(file) {
+        
+        let html;
+        const rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = () => {
                 if(rawFile.readyState === 4) {
                         if(rawFile.status === 200 || rawFile.status == 0) {
-                                const allText = rawFile.responseText;
-                                htmlFile = allText;
+                                html = rawFile.responseText;
+                        } else {
+                                return "An error occurred"
                         }
                 }
         }
         rawFile.send(null);
-        }
-        
-        readPanelTemplate(browser.runtime.getURL("resources/panel.html"));
+
+        return html
+}
+
+function buildPanel() {
+
+        const htmlFile = readPanelTemplate(browser.runtime.getURL("resources/panel.html"));
         
         document.body.appendChild(document.createRange()
                 .createContextualFragment(htmlFile))
@@ -40,7 +42,7 @@ function buildPanel() {
 
 function beautify() {
         
-        if (checkIfPlainText) {
+    if (checkIfPlainText) {
                 
         buildPanel();
 
