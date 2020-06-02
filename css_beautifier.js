@@ -1,3 +1,11 @@
+/**
+ * Checks if the file open on the tab of browser is really a plain text.
+ * 
+ * The FF default behavior by CSS files it to put an stylesheet at head and
+ * to render the text in a pre tag. The conditions below try to be sure of that
+ * and avoid that similar htmls are interpreted as being a plain text.
+ * 
+ */
 function checkIfPlainText() {
         
         if (document.body.childNodes.length === 1 &&
@@ -11,7 +19,15 @@ function checkIfPlainText() {
                 }
 }
 
-// adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file 
+/**
+ * 
+ * reads the file of panel template, namely panel.html
+ *  
+ * @param {string} file Url to the file
+ * @returns {string} html The text read from the file
+ * 
+ *  adapted from https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file 
+ */
 function readPanelTemplate(file) {
         
         let html;
@@ -31,6 +47,13 @@ function readPanelTemplate(file) {
         return html
 }
 
+/**
+ * 
+ * Set up html of the page, put texts at its right places and add event listeners
+ * 
+ * @param {HTMLPreElement} pre 
+ * @param {string} css_code 
+ */
 function buildPanel(pre, css_code) {
 
         const htmlFile = 
@@ -76,6 +99,12 @@ function buildPanel(pre, css_code) {
         
 }
 
+/**
+ * Autocalled function that starts the extension action
+ * 
+ * Checks if the text is a plain text, gets text, beautify and highlights it and
+ * call buildPanel
+ */
 (function beautify() {
         
         if (checkIfPlainText) {
