@@ -43,7 +43,7 @@ function beautify() {
         if (checkIfPlainText) {
                 
         buildPanel();
-        
+
         const pre = document.getElementsByTagName('pre')[0];
         const css_code = pre.innerText;
         pre.innerText = "";
@@ -99,3 +99,5 @@ function beautify() {
         }
 
 }
+
+beautify()
