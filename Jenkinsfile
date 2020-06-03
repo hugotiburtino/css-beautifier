@@ -9,7 +9,6 @@ pipeline {
     stage('Build') {
       steps {
           sh 'web-ext build'
-        }
       }
     }
   }
