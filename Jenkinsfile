@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Lint') {
       steps {
-        sh 'npm lint'
+        sh 'npm run lint'
       }
     }
     stage('Build') {
