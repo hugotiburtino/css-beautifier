@@ -1,0 +1,14 @@
+env:
+  browser: true
+  es6: true
+  webextensions: true
+extends: 'eslint:recommended'
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+  js-beautify: true
+  css_beautify: true
+  browser: true
+  hljs: true
+parserOptions:
+  ecmaVersion: 11
