@@ -111,6 +111,9 @@ function buildPanel(pre, css_code) {
                 
                 
                 const pre = document.getElementsByTagName('pre')[0];
+                if (!pre) {
+                        throw console.error('CSS Beautifier: code not found');
+                }
                 const css_code = pre.innerText;
                 pre.innerText = "";
                 
