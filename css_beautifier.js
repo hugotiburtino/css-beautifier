@@ -57,7 +57,7 @@ function readPanelTemplate(file) {
 function buildPanel(pre, css_code) {
 
         const htmlFile = 
-                readPanelTemplate(browser.runtime.getURL("resources/panel.html"));
+                readPanelTemplate(browser.runtime.getURL("assets/panel.html"));
         
         document.body.appendChild(document.createRange()
                 .createContextualFragment(htmlFile));
