@@ -5,7 +5,9 @@
   "main": "css_beautifier.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint css_beautifier.js"
+    "lint-js": "eslint css_beautifier.js",
+    "lint-html": "html-validate panel.html",
+    "build": "web-ext build"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,8 @@
   },
   "homepage": "https://github.com/hugotiburtino/css-beautifier#readme",
   "devDependencies": {
-    "eslint": "^7.1.0"
+    "eslint": "^7.1.0",
+    "html-validate": "^2.23.0",
+    "web-ext": "^4.2.0"
   }
 }

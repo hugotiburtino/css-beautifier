@@ -6,14 +6,24 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('Lint') {
+    stage('Lint JS') {
       steps {
-        sh 'npm run lint'
+        sh 'npm run lint-js'
+      }
+    }
+    stage('Lint HTML') {
+      steps {
+        sh 'npm run lint-html'
       }
     }
     stage('Build') {
+      steps { //add output dir
+          sh 'npm build'
+      }
+    }
+    stage('Clear') {
       steps {
-          sh 'web-ext build'
+          sh 'rm -rf node_modules/'
       }
     }
   }
