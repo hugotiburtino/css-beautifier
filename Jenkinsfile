@@ -17,7 +17,7 @@ pipeline {
       }
     }
     stage('Build') {
-      steps { //add output dir
+      steps {
           sh 'npm build'
       }
     }
