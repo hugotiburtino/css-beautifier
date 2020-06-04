@@ -14,8 +14,7 @@ function checkIfPlainText() {
                 document.head.children.length === 1 &&
                 document.head.children[0].rel === "stylesheet") {
                         
-                        return true
-                
+                        return true;
                 }
 }
 
@@ -38,13 +37,13 @@ function readPanelTemplate(file) {
                         if(rawFile.status === 200 || rawFile.status == 0) {
                                 html = rawFile.responseText;
                         } else {
-                                return "An error occurred"
+                                return "An error occurred";
                         }
                 }
-        }
+        };
         rawFile.send(null);
 
-        return html
+        return html;
 }
 
 /**
@@ -71,6 +70,8 @@ function buildPanel(pre, css_code) {
         const rawPanel = document.getElementById('rawdata-panel');
         rawPanel.appendChild(rawContainer);
 
+        const jsonPanel = document.getElementById('json-panel')
+
         const rawTab = document.getElementById('rawdata-tab');
         const beautyTab = document.getElementById('json-tab');
         
@@ -79,10 +80,9 @@ function buildPanel(pre, css_code) {
                 beautyTab.parentNode.classList.remove('is-active');
                 rawPanel.style.visibility = "visible";
                 rawPanel.style.height = "100%";
-                document.getElementById('json-panel')
-                        .style.visibility = "hidden";
-                document.getElementById('json-panel')
-                        .style.height = "0px";
+                
+                jsonPanel.style.visibility = "hidden";
+                jsonPanel.style.height = "0px";
         });
                 
         
@@ -91,10 +91,8 @@ function buildPanel(pre, css_code) {
                 beautyTab.parentNode.classList.add('is-active');
                 rawPanel.style.visibility = "hidden";
                 rawPanel.style.height = "0px";
-                document.getElementById('json-panel')
-                        .style.visibility = "visible";
-                document.getElementById('json-panel')
-                        .style.height = "100%";
+                jsonPanel.style.visibility = "visible";
+                jsonPanel.style.height = "100%";
         });
         
 }
@@ -129,4 +127,4 @@ function buildPanel(pre, css_code) {
                 buildPanel(pre, css_code);
         }
 
-})()
+})();
