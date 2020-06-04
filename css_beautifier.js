@@ -64,12 +64,10 @@ function buildPanel(pre, css_code) {
         const codeColumn = document.getElementById('value');
         codeColumn.appendChild(pre);
                 
-        const rawContainer = document.createElement('pre');
+        const rawContainer = document.getElementById('raw-code');
         rawContainer.innerText = css_code;
 
         const rawPanel = document.getElementById('rawdata-panel');
-        rawPanel.appendChild(rawContainer);
-
         const jsonPanel = document.getElementById('json-panel')
 
         const rawTab = document.getElementById('rawdata-tab');
@@ -80,7 +78,9 @@ function buildPanel(pre, css_code) {
                 beautyTab.parentNode.classList.remove('is-active');
                 rawPanel.style.visibility = "visible";
                 rawPanel.style.height = "100%";
+                rawPanel.classList.toggle("hidden")
                 
+                jsonPanel.classList.toggle("hidden")
                 jsonPanel.style.visibility = "hidden";
                 jsonPanel.style.height = "0px";
         });
@@ -91,6 +91,9 @@ function buildPanel(pre, css_code) {
                 beautyTab.parentNode.classList.add('is-active');
                 rawPanel.style.visibility = "hidden";
                 rawPanel.style.height = "0px";
+                rawPanel.classList.toggle("hidden")
+
+                jsonPanel.classList.toggle("hidden")
                 jsonPanel.style.visibility = "visible";
                 jsonPanel.style.height = "100%";
         });
