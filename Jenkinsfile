@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-          echo '${CSS_BEAUT_DIR}'
+          sh 'echo $CSS_BEAUT_DIR'
           sh 'npm run build -- --artifacts-dir $CSS_BEAUT_DIR/web-ext-artifacts'
       }
     }
