@@ -5,7 +5,8 @@
   
     "rules": {
       "no-inline-style": "off",
-      "no-deprecated-attr": "off"
+      "no-deprecated-attr": "off",
+      "empty-title": "off"
     }
-  }
+}
   
