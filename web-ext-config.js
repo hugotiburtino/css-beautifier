@@ -7,6 +7,8 @@ module.exports = {
         'sandbox/',
         'screenshots/',
         'Jenkinsfile',
-        'web-ext-config.js'
+        'web-ext-config.js',
+        'package.json',
+        'package-lock.json'
       ]
 }
