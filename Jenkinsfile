@@ -16,6 +16,11 @@ pipeline {
         sh 'npm run lint-html'
       }
     }
+    stage('Test') {
+      steps {
+        sh 'npm test'
+      }
+    }
     stage('Build') {
       steps {
           sh 'echo $CSS_BEAUT_DIR'
