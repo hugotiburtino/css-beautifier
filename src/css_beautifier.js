@@ -32,11 +32,14 @@ function readPanelTemplate(file) {
         let html;
         const rawFile = new XMLHttpRequest();
         rawFile.open("GET", file, false);
+
+        // TODO: maybe a simpler way to achieve the same result
         rawFile.onreadystatechange = () => {
                 if(rawFile.readyState === 4) {
                         if(rawFile.status === 200 || rawFile.status == 0) {
                                 html = rawFile.responseText;
                         } else {
+                                // TODO: better error handling
                                 return "An error occurred";
                         }
                 }
@@ -97,6 +100,9 @@ function buildPanel(pre, css_code) {
                 jsonPanel.style.visibility = "visible";
                 jsonPanel.style.height = "100%";
         });
+
+        // TODO: feature: Save file
+
         
 }
 
@@ -107,16 +113,19 @@ function buildPanel(pre, css_code) {
  * if that is the case, gets text, beautifies, highlights it
  * and calls buildPanel
  */
-(function beautify() {
+function beautify() {
         
         if (checkIfPlainText) {
-                
-                
+                                
                 const pre = document.getElementsByTagName('pre')[0];
                 if (!pre) {
                         throw console.error('CSS Beautifier: code not found');
                 }
                 const css_code = pre.innerText;
+                /* TODO: improve performance, just erase text when the 
+                 * panel is ready. Show a message that the beautifing 
+                 * process is taking place
+                 */
                 pre.innerText = "";
                 
                 const code = document.createElement("code");
@@ -131,4 +140,7 @@ function buildPanel(pre, css_code) {
                 buildPanel(pre, css_code);
         }
 
-})();
+};
+
+// TODO: major feature: list all CSS of a page, like View CSS
+

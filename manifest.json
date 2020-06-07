@@ -19,7 +19,7 @@
       "css": ["assets/highlight/styles/github-gist.css"],
       "js": ["assets/beautify-css.js" ,
         "assets/highlight/highlight.pack.js" , 
-        "css_beautifier.js"]
+        "src/css_beautifier.js", "index.js"]
     }
   ]
 }
