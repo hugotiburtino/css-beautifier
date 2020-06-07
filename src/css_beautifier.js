@@ -16,6 +16,9 @@ function checkIfPlainText() {
                         
                         return true;
                 }
+        else {
+                return false
+        }
 }
 
 /**
@@ -119,9 +122,10 @@ function beautify() {
                                 
                 const pre = document.getElementsByTagName('pre')[0];
                 if (pre.innerText === '') {
-                        throw console.error('CSS Beautifier: code not found');
+                        throw console.error('Error: empty code');
                 }
                 const css_code = pre.innerText;
+
                 /* TODO: improve performance, just erase text when the 
                  * panel is ready. Show a message that the beautifing 
                  * process is taking place
@@ -144,3 +148,4 @@ function beautify() {
 
 // TODO: major feature: list all CSS of a page, like View CSS
 
+module.exports = { checkIfPlainText: checkIfPlainText }
