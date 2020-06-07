@@ -110,7 +110,7 @@ function buildPanel(pre, css_code) {
 }
 
 /**
- * Autocalled function that starts the extension action
+ * Function that starts the extension action
  * 
  * Checks if the text is a plain text, 
  * if that is the case, gets text, beautifies, highlights it
@@ -147,5 +147,3 @@ function beautify() {
 };
 
 // TODO: major feature: list all CSS of a page, like View CSS
-
-module.exports = { checkIfPlainText: checkIfPlainText }
