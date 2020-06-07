@@ -118,7 +118,7 @@ function beautify() {
         if (checkIfPlainText) {
                                 
                 const pre = document.getElementsByTagName('pre')[0];
-                if (!pre) {
+                if (pre.innerText === '') {
                         throw console.error('CSS Beautifier: code not found');
                 }
                 const css_code = pre.innerText;
