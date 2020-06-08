@@ -12,3 +12,5 @@ globals:
   hljs: true
 parserOptions:
   ecmaVersion: 11
+rules:
+  no-unused-vars: off
