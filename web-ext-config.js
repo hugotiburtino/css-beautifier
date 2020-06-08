@@ -9,6 +9,7 @@ module.exports = {
         'Jenkinsfile',
         'web-ext-config.js',
         'package.json',
-        'package-lock.json'
+        'package-lock.json',
+        'spec'
       ]
 }
