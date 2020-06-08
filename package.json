@@ -5,7 +5,7 @@
   "main": "css_beautifier.js",
   "scripts": {
     "test": "jasmine-node spec",
-    "lint-js": "eslint css_beautifier.js",
+    "lint-js": "eslint src/css_beautifier.js",
     "lint-html": "html-validate assets/panel.html",
     "build": "web-ext build"
   },
