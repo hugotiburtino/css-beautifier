@@ -29,7 +29,7 @@ pipeline {
     }
     stage('Clear') {
       steps {
-          sh 'rm -rf node_modules/'
+          sh 'rm -rf node_modules/ --verbose'
       }
     }
   }
