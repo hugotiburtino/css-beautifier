@@ -1,5 +1,8 @@
 # Changes to CSS Beautifier (Firefox Extension)
 
+## 1.3.2 (June 9, 2020)
+- Debug: The text gets highlighted when you select it
+
 ## 1.3.1 (June 4, 2020)
 - Debug: The raw content can be scrolled
 
