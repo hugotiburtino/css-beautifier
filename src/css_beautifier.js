@@ -144,6 +144,7 @@ function beautify() {
                 buildPanel(pre, css_code);
         }
 
-};
+}
 
 // TODO: major feature: list all CSS of a page, like View CSS
+
