@@ -8,6 +8,11 @@
     <title id="titel"> </title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'none' ; script-src resource:; ">
     <link rel="stylesheet" type="text/css" href="resource://devtools-client-jsonview/css/main.css">
+    <!--Adding this style is a workaround, since the selection was not working in versino 1.3.1
+    See Issue #9. But there may be a better solution for that problem-->
+    <style>
+        ::selection { background-color: var(--blue-55); color: white;}
+    </style>
 </head>
 
 <body>
